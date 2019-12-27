@@ -5,11 +5,24 @@
  * For more details take a look at the Java Libraries chapter in the Gradle
  * user guide available at https://docs.gradle.org/4.10/userguide/java_library_plugin.html
  */
+buildscript {
+    repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+    }
+    
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.3'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
 
 plugins {
     // Apply the java-library plugin to add support for Java Library
     id 'java-library'
     id 'idea'
+    id 'checkstyle'
 }
 
 dependencies {
@@ -25,9 +38,8 @@ dependencies {
     testCompile("org.assertj:assertj-core:3.13.2")
 }
 
-// In this section you declare where to find the dependencies of your project
-repositories {
-    // Use jcenter for resolving your dependencies.
-    // You can declare any Maven/Ivy/file repository here.
-    jcenter()
+allprojects {
+    repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+    }
 }
