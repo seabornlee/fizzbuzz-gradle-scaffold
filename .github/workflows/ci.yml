@@ -15,4 +15,4 @@ jobs:
       - name: Run test
         run: gradle test
       - name: Check code
-        run: gradle check
+        run: gradle check --stacktrace
