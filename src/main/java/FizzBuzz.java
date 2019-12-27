@@ -1,5 +1,5 @@
 public class FizzBuzz {
-    public static boolean of(int number) {
-        return false;
+    public static String of(int number) {
+        return "1";
     }
 }
