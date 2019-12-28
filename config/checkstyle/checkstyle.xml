@@ -13,11 +13,6 @@
         <property name="max" value="1500"/>
     </module>
 
-    <!-- 长度检查 -->
-    <module name="LineLength">
-        <property name="max" value="120"/>
-    </module>
-    
     <!-- 每个java文件一个语法树 -->
     <module name="TreeWalker">
         <!-- import检查-->
@@ -51,6 +46,10 @@
         <module name="TypeName">
             <property name="severity" value="warning"/>
             <message key="name.invalidPattern" value="名称 ''{0}'' 要符合 ''{1}''格式."/>
+        </module>
+        <!-- 长度检查 -->
+        <module name="LineLength">
+            <property name="max" value="120"/>
         </module>
         <!-- 非static型变量的检查 -->
         <module name="MemberName"/>
