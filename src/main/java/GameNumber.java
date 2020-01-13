@@ -10,19 +10,19 @@ public class GameNumber {
     @Override
     public String toString() {
         String s = valueOf(num);
-        if (isdivicible(3)) {
+        if (isdivisible(3)) {
             s = "fizz";
         }
-        if (isdivicible(5)) {
+        if (isdivisible(5)) {
             s = "buzz";
         }
-        if (isdivicible(5) && isdivicible(3)) {
+        if (isdivisible(5) && isdivisible(3)) {
             s = "fizzbuzz";
         }
         return s;
     }
 
-    private boolean isdivicible(int i) {
+    private boolean isdivisible(int i) {
         return num % i == 0;
     }
 }
