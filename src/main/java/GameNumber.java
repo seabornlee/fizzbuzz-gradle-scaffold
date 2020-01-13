@@ -1,28 +1,28 @@
 import static java.lang.String.valueOf;
 
 public class GameNumber {
-    private int num;
-
-    public GameNumber(int num) {
-        this.num = num;
-    }
+    private final int num;
 
     @Override
     public String toString() {
         String s = valueOf(num);
-        if (isdivisible(3)) {
+        if (isdivicible(3)) {
             s = "fizz";
         }
-        if (isdivisible(5)) {
+        if (isdivicible(5)) {
             s = "buzz";
         }
-        if (isdivisible(5) && isdivisible(3)) {
+        if (isdivicible(5) && isdivicible(3)) {
             s = "fizzbuzz";
         }
         return s;
     }
 
-    private boolean isdivisible(int i) {
+    private boolean isdivicible(int i) {
         return num % i == 0;
+    }
+
+    public GameNumber(int num) {
+        this.num = num;
     }
 }
