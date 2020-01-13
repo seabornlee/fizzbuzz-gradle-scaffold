@@ -12,7 +12,7 @@ public class GameNumber {
         if (isdivicible(5)) {
             s = "buzz";
         }
-        if (isdivicible(5) && isdivicible(3)) {
+        if (isdivicible(3) && isdivicible(5)) {
             s = "fizzbuzz";
         }
         return s;
