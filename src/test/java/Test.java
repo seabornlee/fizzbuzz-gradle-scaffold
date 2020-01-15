@@ -1,29 +1,12 @@
-import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 public class Test {
     @org.junit.Test
-    public void fizzbuzz() {
-        checkNumber(15, "fizzbuzz");
-    }
-
-    @org.junit.Test
-    public void buzz() {
-        checkNumber(5, "buzz");
-    }
-
-    @org.junit.Test
-    public void fizz() {
-        checkNumber(3, "fizz");
-    }
-
-    @org.junit.Test
-    public void normal() {
-        checkNumber(1, "1");
-        checkNumber(2, "2");
-    }
-
-    private void checkNumber(int i, String s) {
-        assertThat(new GameNumber(i).toString(), is(s));
+    public void name() {
+        assertThat(new GameNumber(1).toString(), is("1"));
+        assertThat(new GameNumber(3).toString(), is("fizz"));
+        assertThat(new GameNumber(5).toString(), is("buzz"));
+        assertThat(new GameNumber(15).toString(), is("fizzbuzz"));
     }
 }
